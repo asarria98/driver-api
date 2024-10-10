@@ -8,7 +8,7 @@ app = FastAPI()
 
 # Función para obtener una conexión a la base de datos
 def get_db_connection():
-    return sqlite3.connect('Formula1.sqlite')
+    return sqlite3.connect('../db/Formula1.sqlite')
 
 @app.get("/drivers/{name}")
 def get_by_name(name: str):
